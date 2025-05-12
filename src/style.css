@@ -35,6 +35,7 @@ body {
 
 .list-item:first-child {
   margin: 0;
+  margin-right: 10px;
 }
 
 .list-item:last-child {
