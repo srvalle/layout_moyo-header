@@ -1,4 +1,5 @@
 body {
+  --blue-color: #00acdc;
   background-color: #e4e4e4;
   margin: 0;
 }
@@ -16,11 +17,13 @@ body {
   align-items: center;
   height: 60px;
   display: flex;
-  position: relative;
 }
 
 .list {
+  margin: 0;
+  padding: 0;
   display: flex;
+  position: relative;
 }
 
 .list-item {
@@ -35,34 +38,42 @@ body {
 .list a {
   color: #000;
   text-transform: uppercase;
+  height: 60px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: bold;
+  line-height: 60px;
   text-decoration: none;
+  display: block;
 }
 
 .list a:hover {
-  text-decoration: underline 2px #00acdc;
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--blue-color);
+  text-decoration-color: var(--blue-color);
+  text-decoration-thickness: 2px;
 }
 
 .list .is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
-.rectangle {
-  background: #00acdc;
+.list .is-active:after {
+  content: "";
+  background: var(--blue-color);
   border-radius: 8px;
-  width: 40px;
+  width: 36px;
   height: 4px;
   position: absolute;
-  top: 56px;
-  left: 40px;
+  bottom: 0;
+  left: 0;
 }
 
 .logo {
   width: 40px;
   height: 40px;
-  display: flex;
+  margin-right: 50px;
+  display: block;
 }
 
 .logo-link {
